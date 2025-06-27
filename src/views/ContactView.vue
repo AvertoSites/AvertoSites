@@ -228,9 +228,7 @@ const handleSubmit = async (e) => {
                     <a href="https://www.tiktok.com/@avertosites" target="_blank" rel="noopener"
                       >TikTok</a
                     >
-                    <a href="https://wa.me/qr/XRUHQU3PG4EUH1" target="_blank" rel="noopener"
-                      >WhatsApp</a
-                    >
+                    <a href="https://wa.me/16475098275" target="_blank" rel="noopener">WhatsApp</a>
                   </div>
                   <span class="method-note">Follow us for updates and tips</span>
                 </div>
