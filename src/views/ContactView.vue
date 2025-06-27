@@ -21,6 +21,9 @@ const SERVICE_ID = 'service_99cmiz3'
 const TEMPLATE_ID = 'template_v7gyg3f'
 const PUBLIC_KEY = 'hYCUhwMq4FFMIpUFe'
 
+// Auto-reply template ID
+const AUTO_REPLY_TEMPLATE_ID = 'template_637sh4h'
+
 const budgetOptions = [
   'Under $1,000',
   '$1,000 - $2,500',
@@ -46,6 +49,7 @@ const handleSubmit = async (e) => {
   sendError.value = false
 
   try {
+    // Send the main inquiry email to you
     await emailjs.send(
       SERVICE_ID,
       TEMPLATE_ID,
@@ -60,6 +64,23 @@ const handleSubmit = async (e) => {
       },
       PUBLIC_KEY,
     )
+
+    // Send auto-reply to the customer
+    await emailjs.send(
+      SERVICE_ID,
+      AUTO_REPLY_TEMPLATE_ID,
+      {
+        name: formData.value.name,
+        email: formData.value.email,
+        phone: formData.value.phone || 'Not provided',
+        company: formData.value.company || 'Not provided',
+        message: formData.value.message,
+        budget: formData.value.budget || 'Not specified',
+        projectType: formData.value.projectType,
+      },
+      PUBLIC_KEY,
+    )
+
     sendSuccess.value = true
     // Reset form
     formData.value = {
@@ -72,6 +93,7 @@ const handleSubmit = async (e) => {
       projectType: '',
     }
   } catch (error) {
+    console.error('Email error:', error)
     sendError.value = true
   } finally {
     isSending.value = false
