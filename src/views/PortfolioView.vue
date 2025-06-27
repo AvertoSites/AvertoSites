@@ -265,7 +265,7 @@ a {
 }
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   padding: 4rem 0;
   text-align: center;
@@ -279,7 +279,7 @@ a {
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -287,7 +287,7 @@ a {
 /* Portfolio Filter */
 .portfolio-filter {
   padding: 2rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -301,7 +301,7 @@ a {
 .filter-btn {
   background: white;
   border: 2px solid #e2e8f0;
-  color: #64748b;
+  color: var(--gray);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
@@ -311,7 +311,7 @@ a {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   border-color: transparent;
 }
@@ -357,7 +357,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(6, 182, 212, 0.9);
+  background: rgba(30, 64, 175, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,7 +371,7 @@ a {
 
 .view-project-btn {
   background: white;
-  color: #06b6d4;
+  color: var(--logo-blue);
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -388,7 +388,7 @@ a {
 }
 
 .project-category {
-  color: #06b6d4;
+  color: var(--logo-green);
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -397,20 +397,20 @@ a {
 }
 
 .project-content h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .project-description {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .project-features h4,
 .project-technologies h4 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
@@ -421,7 +421,7 @@ a {
 }
 
 .project-features li {
-  color: #374151;
+  color: var(--dark-gray);
   margin-bottom: 0.25rem;
   padding-left: 1rem;
   position: relative;
@@ -431,7 +431,7 @@ a {
   content: '•';
   position: absolute;
   left: 0;
-  color: #06b6d4;
+  color: var(--logo-green);
 }
 
 .tech-tags {
@@ -442,8 +442,8 @@ a {
 }
 
 .tech-tag {
-  background: #f1f5f9;
-  color: #374151;
+  background: var(--off-white);
+  color: var(--dark-gray);
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.875rem;
@@ -451,28 +451,28 @@ a {
 }
 
 .client-testimonial {
-  background: #f8fafc;
+  background: var(--off-white);
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid #06b6d4;
+  border-left: 4px solid var(--logo-green);
 }
 
 .testimonial-content p {
-  color: #374151;
+  color: var(--dark-gray);
   font-style: italic;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
 .client-info {
-  color: #64748b;
+  color: var(--gray);
   font-size: 0.9rem;
 }
 
 /* Statistics Section */
 .statistics {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .stats-grid {
@@ -492,12 +492,12 @@ a {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #06b6d4;
+  color: var(--logo-blue);
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  color: #64748b;
+  color: var(--gray);
   font-weight: 500;
 }
 
@@ -513,13 +513,13 @@ a {
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
 }
 
 .section-header p {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -541,20 +541,20 @@ a {
 }
 
 .process-step h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .process-step p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   text-align: center;
 }
@@ -566,7 +566,7 @@ a {
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
@@ -591,7 +591,7 @@ a {
 }
 
 .cta-button.primary {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
 }
 
@@ -607,7 +607,7 @@ a {
 
 .cta-button.secondary:hover {
   background: white;
-  color: #0f172a;
+  color: var(--logo-black);
 }
 
 /* Responsive Design */

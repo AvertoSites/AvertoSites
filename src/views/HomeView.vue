@@ -200,7 +200,7 @@ const testimonials = [
 <style scoped>
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   padding: 6rem 0;
   min-height: 80vh;
@@ -223,7 +223,7 @@ const testimonials = [
 }
 
 .highlight {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -233,7 +233,7 @@ const testimonials = [
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
 }
 
 .hero-actions {
@@ -253,13 +253,13 @@ const testimonials = [
 }
 
 .cta-button.primary {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
 }
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
 }
 
 .cta-button.secondary {
@@ -270,7 +270,7 @@ const testimonials = [
 
 .cta-button.secondary:hover {
   background: white;
-  color: #0f172a;
+  color: var(--logo-black);
 }
 
 .cta-button.large {
@@ -335,13 +335,13 @@ const testimonials = [
 
 .mockup-header {
   height: 60px;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   border-radius: 8px;
 }
 
 .mockup-hero {
   height: 200px;
-  background: linear-gradient(45deg, #f8fafc, #e2e8f0);
+  background: linear-gradient(45deg, var(--off-white), var(--light-gray));
   border-radius: 8px;
 }
 
@@ -353,14 +353,14 @@ const testimonials = [
 
 .mockup-card {
   height: 100px;
-  background: #f1f5f9;
+  background: var(--off-white);
   border-radius: 8px;
 }
 
 /* Features Section */
 .features {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .features-grid {
@@ -388,13 +388,13 @@ const testimonials = [
 }
 
 .feature-card h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .feature-card p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -410,13 +410,13 @@ const testimonials = [
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
 }
 
 .section-header p {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--gray);
 }
 
 .portfolio-grid {
@@ -443,7 +443,7 @@ const testimonials = [
 .portfolio-image {
   width: 100%;
   height: 200px;
-  background: #f1f5f9;
+  background: var(--off-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,7 +474,7 @@ const testimonials = [
 }
 
 .portfolio-category {
-  color: #06b6d4;
+  color: var(--logo-green);
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -482,13 +482,13 @@ const testimonials = [
 }
 
 .portfolio-content h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin: 0.5rem 0;
   font-size: 1.25rem;
 }
 
 .portfolio-content p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -498,22 +498,22 @@ const testimonials = [
 }
 
 .cta-button.secondary {
-  background: #06b6d4;
+  background: var(--logo-green);
   color: #fff;
   border: none;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.08);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.08);
 }
 
 .cta-button.secondary:hover {
-  background: #3b82f6;
+  background: var(--green-light);
   color: #fff;
 }
 
 /* Testimonials */
 .testimonials {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .testimonials-grid {
@@ -539,7 +539,7 @@ const testimonials = [
 
 .testimonial-content {
   font-style: italic;
-  color: #374151;
+  color: var(--dark-gray);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -554,23 +554,23 @@ const testimonials = [
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
 }
 
 .author-info h4 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 0.25rem;
 }
 
 .author-info p {
-  color: #64748b;
+  color: var(--gray);
   font-size: 0.875rem;
 }
 
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   text-align: center;
 }
@@ -582,7 +582,7 @@ const testimonials = [
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;

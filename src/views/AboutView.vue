@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: 'Somtochukwu Kay-Okerule',
     image: '/somto.jpg',
-    link: '#',
+    link: 'https://www.linkedin.com/in/somtochukwu-k-32b5bb28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     role: 'Co-Founder & Brand Strategist',
     bio: 'Expert in social media marketing and brand development. Helps businesses create compelling online presence and engage with their audience effectively.',
     focus: 'Social Media + Branding',
@@ -115,16 +115,39 @@ const values = [
         </div>
         <div class="team-grid">
           <div v-for="member in teamMembers" :key="member.name" class="team-member">
-            <div class="member-avatar">
-              <div class="avatar-placeholder"><img :src="member.image" alt="" /></div>
-            </div>
-            <div class="member-info">
-              <h3>
-                <a :href="member.link" target="_blank" rel="noopener">{{ member.name }}</a>
-              </h3>
-              <p class="member-role">{{ member.role }}</p>
-              <p class="member-focus"><strong>Focus:</strong> {{ member.focus }}</p>
-              <p class="member-bio">{{ member.bio }}</p>
+            <div class="member-card">
+              <div class="member-avatar">
+                <img :src="member.image" :alt="member.name" />
+                <div class="avatar-overlay">
+                  <a :href="member.link" target="_blank" rel="noopener" class="profile-link">
+                    <span>View Profile</span>
+                  </a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>{{ member.name }}</h3>
+                <p class="member-role">{{ member.role }}</p>
+                <div class="member-focus">
+                  <span class="focus-label">Focus:</span>
+                  <span class="focus-area">{{ member.focus }}</span>
+                </div>
+                <p class="member-bio">{{ member.bio }}</p>
+                <div class="member-social">
+                  <a :href="member.link" target="_blank" rel="noopener" class="social-link">
+                    <span>Connect</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -229,7 +252,7 @@ const values = [
 /* Mission Section */
 .mission {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .mission-content {
@@ -241,14 +264,14 @@ const values = [
 
 .mission-text h2 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 2rem;
 }
 
 .mission-statement {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #374151;
+  color: var(--dark-gray);
   margin-bottom: 1.5rem;
 }
 
@@ -260,7 +283,7 @@ const values = [
 }
 
 .slogan-item {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
@@ -287,18 +310,19 @@ const values = [
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #06b6d4;
+  color: var(--logo-blue);
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  color: #64748b;
+  color: var(--gray);
   font-weight: 500;
 }
 
 /* Team Section */
 .team {
   padding: 5rem 0;
+  background: var(--off-white);
 }
 
 .section-header {
@@ -308,82 +332,187 @@ const values = [
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
 }
 
 .section-header p {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .team-member {
   background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.member-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
+  flex-direction: column;
 }
 
 .member-avatar {
-  flex-shrink: 0;
-}
-
-.avatar-placeholder {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  position: relative;
+  width: 100%;
+  height: 320px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.avatar-placeholder img {
+.member-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-avatar img {
+  transform: scale(1.05);
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.8), rgba(5, 150, 105, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.avatar-overlay:hover {
+  opacity: 1;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.profile-link:hover {
+  background: white;
+  color: var(--logo-blue);
+}
+
+.member-info {
+  padding: 2rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .member-info h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .member-role {
-  color: #06b6d4;
+  color: var(--logo-blue);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .member-focus {
-  color: #64748b;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--off-white);
+  border-radius: 8px;
+  border-left: 4px solid var(--logo-green);
+}
+
+.focus-label {
+  color: var(--gray);
   font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.focus-area {
+  color: var(--logo-black);
+  font-weight: 600;
+  margin-left: 0.5rem;
 }
 
 .member-bio {
-  color: #374151;
+  color: var(--gray);
   line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.member-social {
+  margin-top: auto;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--logo-blue);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--logo-blue);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--logo-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover svg {
+  transform: translateX(2px);
 }
 
 /* Values Section */
 .values {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .values-grid {
@@ -411,13 +540,13 @@ const values = [
 }
 
 .value-card h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .value-card p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -440,10 +569,10 @@ const values = [
 .step-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   border-radius: 50%;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
@@ -452,20 +581,20 @@ const values = [
 }
 
 .process-step h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .process-step p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   text-align: center;
 }
@@ -477,7 +606,7 @@ const values = [
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
@@ -486,7 +615,7 @@ const values = [
 
 .cta-button {
   display: inline-block;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   padding: 1rem 2rem;
   border-radius: 8px;

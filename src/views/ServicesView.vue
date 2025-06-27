@@ -335,7 +335,7 @@ const packages = [
 <style scoped>
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   padding: 4rem 0;
   text-align: center;
@@ -349,7 +349,7 @@ const packages = [
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -357,7 +357,7 @@ const packages = [
 /* Services Overview */
 .services-overview {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .section-header {
@@ -367,13 +367,13 @@ const packages = [
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
 }
 
 .section-header p {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -402,13 +402,13 @@ const packages = [
 }
 
 .service-card h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .service-description {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -419,7 +419,7 @@ const packages = [
 }
 
 .service-features li {
-  color: #374151;
+  color: var(--dark-gray);
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
@@ -429,14 +429,14 @@ const packages = [
   content: '✓';
   position: absolute;
   left: 0;
-  color: #06b6d4;
+  color: var(--logo-green);
   font-weight: bold;
 }
 
 .service-price {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #06b6d4;
+  color: var(--logo-blue);
   text-align: center;
   padding-top: 1rem;
   border-top: 1px solid #e2e8f0;
@@ -469,7 +469,7 @@ const packages = [
 }
 
 .pricing-card.popular {
-  border: 2px solid #06b6d4;
+  border: 2px solid var(--logo-green);
   transform: scale(1.05);
 }
 
@@ -478,7 +478,7 @@ const packages = [
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -492,7 +492,7 @@ const packages = [
 }
 
 .package-header h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -504,11 +504,11 @@ const packages = [
 .price {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #06b6d4;
+  color: var(--logo-blue);
 }
 
 .package-description {
-  color: #64748b;
+  color: var(--gray);
   font-size: 0.9rem;
 }
 
@@ -518,21 +518,21 @@ const packages = [
 }
 
 .package-features li {
-  color: #374151;
+  color: var(--dark-gray);
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
 }
 
 .checkmark {
-  color: #06b6d4;
+  color: var(--logo-green);
   font-weight: bold;
   margin-right: 0.75rem;
 }
 
 .package-cta {
   display: block;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   padding: 1rem;
   border-radius: 8px;
@@ -549,7 +549,7 @@ const packages = [
 /* Why Choose Us */
 .why-choose-us {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .benefits-grid {
@@ -572,13 +572,13 @@ const packages = [
 }
 
 .benefit-item h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 .benefit-item p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -607,13 +607,13 @@ const packages = [
   top: 60px;
   bottom: -3rem;
   width: 2px;
-  background: linear-gradient(to bottom, #06b6d4, #3b82f6);
+  background: linear-gradient(to bottom, var(--logo-blue), var(--logo-green));
 }
 
 .step-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   border-radius: 50%;
   display: flex;
@@ -625,20 +625,20 @@ const packages = [
 }
 
 .step-content h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
 
 .step-content p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   text-align: center;
 }
@@ -650,7 +650,7 @@ const packages = [
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
@@ -675,7 +675,7 @@ const packages = [
 }
 
 .cta-button.primary {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
 }
 
@@ -691,7 +691,7 @@ const packages = [
 
 .cta-button.secondary:hover {
   background: white;
-  color: #0f172a;
+  color: var(--logo-black);
 }
 
 /* Responsive Design */

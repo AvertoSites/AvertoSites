@@ -391,7 +391,7 @@ const handleSubmit = async (e) => {
 <style scoped>
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   padding: 4rem 0;
   text-align: center;
@@ -405,7 +405,7 @@ const handleSubmit = async (e) => {
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -413,7 +413,7 @@ const handleSubmit = async (e) => {
 /* Contact Content */
 .contact-content {
   padding: 5rem 0;
-  background: #f8fafc;
+  background: var(--off-white);
 }
 
 .contact-grid {
@@ -425,13 +425,13 @@ const handleSubmit = async (e) => {
 
 /* Contact Form */
 .contact-form-section h2 {
-  color: #1e293b;
+  color: var(--logo-black);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .contact-form-section > p {
-  color: #64748b;
+  color: var(--gray);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -460,7 +460,7 @@ const handleSubmit = async (e) => {
 
 .form-group label {
   display: block;
-  color: #374151;
+  color: var(--dark-gray);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -480,7 +480,7 @@ const handleSubmit = async (e) => {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #06b6d4;
+  border-color: var(--logo-blue);
 }
 
 .form-group textarea {
@@ -489,7 +489,7 @@ const handleSubmit = async (e) => {
 }
 
 .submit-btn {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -507,13 +507,13 @@ const handleSubmit = async (e) => {
 
 /* Contact Information */
 .contact-info-section h2 {
-  color: #1e293b;
+  color: var(--logo-black);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .contact-info-section > p {
-  color: #64748b;
+  color: var(--gray);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -537,18 +537,18 @@ const handleSubmit = async (e) => {
 }
 
 .method-content h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
 
 .method-content p {
-  color: #374151;
+  color: var(--dark-gray);
   margin-bottom: 0.25rem;
 }
 
 .method-note {
-  color: #64748b;
+  color: var(--gray);
   font-size: 0.875rem;
   font-style: italic;
 }
@@ -560,7 +560,7 @@ const handleSubmit = async (e) => {
 }
 
 .social-links a {
-  color: #06b6d4;
+  color: var(--logo-blue);
   text-decoration: none;
   font-weight: 500;
 }
@@ -579,7 +579,7 @@ const handleSubmit = async (e) => {
 }
 
 .business-hours h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -602,12 +602,12 @@ const handleSubmit = async (e) => {
 }
 
 .day {
-  color: #374151;
+  color: var(--dark-gray);
   font-weight: 500;
 }
 
 .time {
-  color: #64748b;
+  color: var(--gray);
 }
 
 /* Response Time */
@@ -619,7 +619,7 @@ const handleSubmit = async (e) => {
 }
 
 .response-time h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -642,12 +642,12 @@ const handleSubmit = async (e) => {
 }
 
 .response-label {
-  color: #374151;
+  color: var(--dark-gray);
   font-weight: 500;
 }
 
 .response-time {
-  color: #06b6d4;
+  color: var(--logo-blue);
   font-weight: 600;
 }
 
@@ -663,13 +663,13 @@ const handleSubmit = async (e) => {
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
 }
 
 .section-header p {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--gray);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -688,20 +688,20 @@ const handleSubmit = async (e) => {
 }
 
 .faq-item h3 {
-  color: #1e293b;
+  color: var(--logo-black);
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
 .faq-item p {
-  color: #64748b;
+  color: var(--gray);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   text-align: center;
 }
@@ -713,7 +713,7 @@ const handleSubmit = async (e) => {
 
 .cta-content p {
   font-size: 1.1rem;
-  color: #cbd5e1;
+  color: var(--light-gray);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
@@ -738,7 +738,7 @@ const handleSubmit = async (e) => {
 }
 
 .cta-button.primary {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
 }
 
@@ -754,7 +754,7 @@ const handleSubmit = async (e) => {
 
 .cta-button.secondary:hover {
   background: white;
-  color: #0f172a;
+  color: var(--logo-black);
 }
 
 /* Responsive Design */

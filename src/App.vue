@@ -98,8 +98,15 @@ onMounted(() => {
           <div class="footer-section">
             <h4>Follow Us</h4>
             <div class="social-links">
-              <a href="https://www.instagram.com/avertosites?igsh=OGwwNnZlaXR2eHcz&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://www.tiktok.com/@avertosites" target="_blank" rel="noopener">TikTok</a>
+              <a
+                href="https://www.instagram.com/avertosites?igsh=OGwwNnZlaXR2eHcz&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+                >Instagram</a
+              >
+              <a href="https://www.tiktok.com/@avertosites" target="_blank" rel="noopener"
+                >TikTok</a
+              >
             </div>
           </div>
         </div>
@@ -134,7 +141,7 @@ onMounted(() => {
 
 /* Header Styles */
 .header {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
   padding: 1rem 0;
   position: sticky;
@@ -157,7 +164,7 @@ onMounted(() => {
 .logo-text {
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -182,11 +189,11 @@ onMounted(() => {
 }
 
 .nav a:hover {
-  color: #06b6d4;
+  color: var(--logo-green);
 }
 
 .nav a.router-link-active {
-  color: #06b6d4;
+  color: var(--logo-green);
 }
 
 .nav a.router-link-active::after {
@@ -196,7 +203,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #06b6d4;
+  background: var(--logo-green);
 }
 
 /* Mobile menu button */
@@ -237,7 +244,7 @@ onMounted(() => {
 
 /* Footer */
 .footer {
-  background: #0f172a;
+  background: var(--logo-black);
   color: white;
   padding: 3rem 0 1rem;
   margin-top: auto;
@@ -251,19 +258,19 @@ onMounted(() => {
 }
 
 .footer-section h3 {
-  color: #06b6d4;
+  color: var(--logo-blue);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .footer-section h4 {
-  color: #06b6d4;
+  color: var(--logo-blue);
   margin-bottom: 1rem;
 }
 
 .slogan {
   font-weight: 600;
-  color: #3b82f6;
+  color: var(--logo-green);
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
@@ -277,18 +284,18 @@ onMounted(() => {
 }
 
 .footer-section a {
-  color: #cbd5e1;
+  color: var(--light-gray);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #06b6d4;
+  color: var(--logo-green);
 }
 
 .cta-button {
   display: inline-block;
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -304,7 +311,7 @@ onMounted(() => {
 
 .contact-info p {
   margin: 0.5rem 0;
-  color: #cbd5e1;
+  color: var(--light-gray);
 }
 
 .social-links {
@@ -313,20 +320,20 @@ onMounted(() => {
 }
 
 .social-links a {
-  color: #cbd5e1;
+  color: var(--light-gray);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #06b6d4;
+  color: var(--logo-green);
 }
 
 .footer-bottom {
   border-top: 1px solid #334155;
   padding-top: 1rem;
   text-align: center;
-  color: #64748b;
+  color: var(--gray);
 }
 
 /* Responsive Design */
@@ -340,7 +347,7 @@ onMounted(() => {
     top: 100%;
     left: 0;
     right: 0;
-    background: #0f172a;
+    background: var(--logo-black);
     flex-direction: column;
     padding: 2rem;
     gap: 1rem;
