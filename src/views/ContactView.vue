@@ -8,7 +8,6 @@ const formData = ref({
   phone: '',
   company: '',
   message: '',
-  budget: '',
   projectType: '',
 })
 
@@ -23,14 +22,6 @@ const PUBLIC_KEY = 'hYCUhwMq4FFMIpUFe'
 
 // Auto-reply template ID
 const AUTO_REPLY_TEMPLATE_ID = 'template_637sh4h'
-
-const budgetOptions = [
-  'Under $1,000',
-  '$1,000 - $2,500',
-  '$2,500 - $5,000',
-  '$5,000 - $10,000',
-  '$10,000+',
-]
 
 const projectTypes = [
   'Website Design & Development',
@@ -59,7 +50,6 @@ const handleSubmit = async (e) => {
         phone: formData.value.phone,
         company: formData.value.company,
         message: formData.value.message,
-        budget: formData.value.budget,
         projectType: formData.value.projectType,
       },
       PUBLIC_KEY,
@@ -75,7 +65,6 @@ const handleSubmit = async (e) => {
         phone: formData.value.phone || 'Not provided',
         company: formData.value.company || 'Not provided',
         message: formData.value.message,
-        budget: formData.value.budget || 'Not specified',
         projectType: formData.value.projectType,
       },
       PUBLIC_KEY,
@@ -89,7 +78,6 @@ const handleSubmit = async (e) => {
       phone: '',
       company: '',
       message: '',
-      budget: '',
       projectType: '',
     }
   } catch (error) {
@@ -178,15 +166,6 @@ const handleSubmit = async (e) => {
                     <option value="">Select project type</option>
                     <option v-for="type in projectTypes" :key="type" :value="type">
                       {{ type }}
-                    </option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="budget">Budget Range</label>
-                  <select id="budget" v-model="formData.budget">
-                    <option value="">Select budget range</option>
-                    <option v-for="budget in budgetOptions" :key="budget" :value="budget">
-                      {{ budget }}
                     </option>
                   </select>
                 </div>
@@ -344,7 +323,7 @@ const handleSubmit = async (e) => {
             <h3>Do you work with small businesses?</h3>
             <p>
               Yes! We love working with small businesses and entrepreneurs. We offer affordable
-              packages designed specifically for growing businesses.
+              solutions designed specifically for growing businesses.
             </p>
           </div>
 
@@ -352,7 +331,7 @@ const handleSubmit = async (e) => {
             <h3>What if I need changes after launch?</h3>
             <p>
               We include 30 days of free revisions after launch. After that, we offer affordable
-              maintenance packages for ongoing updates.
+              maintenance services for ongoing updates.
             </p>
           </div>
 

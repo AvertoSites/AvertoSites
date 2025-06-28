@@ -48,22 +48,22 @@ const portfolioItems = [
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
+    name: 'Shivam Bhatt',
     company: 'Local Bakery Owner',
     content:
       'AvertoSites delivered exactly what I needed - a beautiful, fast website that brings in customers. The process was smooth and the results exceeded my expectations!',
     rating: 5,
   },
   {
-    name: 'Mike Chen',
-    company: 'Tech Startup Founder',
+    name: 'Osita Godsend',
+    company: 'Restaurant Manager',
     content:
       'Professional, responsive, and affordable. My new website looks amazing and loads lightning fast. Highly recommend!',
     rating: 5,
   },
   {
-    name: 'Emily Rodriguez',
-    company: 'Fitness Coach',
+    name: 'Ahmed Olaleye',
+    company: 'De Gentlesoul Global Resources Founder',
     content:
       'The team at AvertoSites understood my vision perfectly. My website now reflects my brand and helps me connect with clients effectively.',
     rating: 5,
@@ -79,13 +79,26 @@ const testimonials = [
         <div class="hero-content">
           <div class="hero-text">
             <h1 class="hero-title">
-              Custom Websites.<br />
+              Elevate Your Business with AvertoSites<br />
               <span class="highlight">Fast. Affordable. Done Right.</span>
             </h1>
             <p class="hero-description">
-              Transform your business with a professional website that converts visitors into
-              customers. We create stunning, fast-loading websites that help you stand out online.
+              At AvertoSites, we specialize in creating high-performance, visually compelling
+              websites that turn visitors into loyal customers. Our expertly crafted websites are
+              designed to stand out, load fast, and deliver results. Whether you're launching a new
+              site or need ongoing support, we're here to build and maintain a digital presence that
+              drives growth.
             </p>
+
+            <div class="special-offer">
+              <div class="offer-badge">🎉 LIMITED TIME OFFER</div>
+              <h3>Choose Your FREE Bonus: Maintenance OR Domain Registration</h3>
+              <p>
+                Every new website comes with your choice: 3 months of complimentary maintenance OR
+                free domain registration. Pick what works best for your business!
+              </p>
+            </div>
+
             <div class="hero-actions">
               <RouterLink to="/contact" class="cta-button primary"
                 >Start Your Website Today</RouterLink
@@ -202,24 +215,25 @@ const testimonials = [
 .hero {
   background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
   color: white;
-  padding: 6rem 0;
-  min-height: 80vh;
+  padding: 8rem 0;
+  min-height: 90vh;
   display: flex;
   align-items: center;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
   align-items: center;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
 }
 
 .highlight {
@@ -227,55 +241,116 @@ const testimonials = [
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
+  margin-top: 1.5rem;
 }
 
 .hero-description {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  margin-bottom: 3rem;
   color: var(--light-gray);
+  max-width: 600px;
+  font-weight: 400;
+}
+
+.special-offer {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-offer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
+}
+
+.offer-badge {
+  background: linear-gradient(45deg, var(--logo-green), #059669);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.special-offer h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.special-offer p {
+  color: var(--light-gray);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 2.5rem;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  min-height: 56px;
+  white-space: nowrap;
 }
 
 .cta-button.primary {
   background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
   color: white;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
 }
 
 .cta-button.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(30, 64, 175, 0.4);
 }
 
 .cta-button.secondary {
   background: transparent;
   color: white;
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .cta-button.secondary:hover {
-  background: white;
-  color: var(--logo-black);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
 }
 
 .cta-button.large {
-  padding: 1.25rem 2.5rem;
-  font-size: 1.1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
 }
 
 /* Website Preview Mockup */
@@ -283,33 +358,43 @@ const testimonials = [
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .browser-mockup {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.browser-mockup:hover {
+  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg);
 }
 
 .browser-header {
-  background: #f1f5f9;
-  padding: 1rem;
+  background: #f8fafc;
+  padding: 1.25rem;
   border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
 }
 
 .browser-dots {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .browser-dots span {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #cbd5e1;
+  transition: all 0.3s ease;
 }
 
 .browser-dots span:nth-child(1) {
@@ -323,38 +408,72 @@ const testimonials = [
 }
 
 .browser-content {
-  padding: 2rem;
+  padding: 2.5rem;
   background: white;
 }
 
 .mockup-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .mockup-header {
-  height: 60px;
+  height: 70px;
   background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
 }
 
 .mockup-hero {
-  height: 200px;
-  background: linear-gradient(45deg, var(--off-white), var(--light-gray));
-  border-radius: 8px;
+  height: 220px;
+  background: linear-gradient(135deg, var(--off-white), var(--light-gray));
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .mockup-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .mockup-card {
-  height: 100px;
+  height: 120px;
   background: var(--off-white);
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.mockup-card:hover {
+  transform: translateY(-2px);
 }
 
 /* Features Section */
@@ -590,59 +709,69 @@ const testimonials = [
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 4rem;
     text-align: center;
   }
 
-  .hero-title {
-    font-size: 2.5rem;
+  .hero-description {
+    max-width: 100%;
   }
 
   .hero-actions {
     justify-content: center;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-header h2 {
-    font-size: 2rem;
-  }
-
-  .cta-content h2 {
-    font-size: 2rem;
+  .browser-mockup {
+    transform: none;
+    max-width: 450px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero {
-    padding: 4rem 0;
+    padding: 6rem 0;
+    min-height: auto;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .special-offer {
+    padding: 1.25rem;
+  }
+
+  .special-offer h3 {
+    font-size: 1.1rem;
   }
 
   .hero-actions {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
 
   .cta-button {
     width: 100%;
-    text-align: center;
+    max-width: 300px;
+  }
+
+  .browser-mockup {
+    max-width: 350px;
+  }
+
+  .browser-content {
+    padding: 1.5rem;
+  }
+
+  .mockup-cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

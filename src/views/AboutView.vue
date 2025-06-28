@@ -7,11 +7,11 @@ const teamMembers = [
     image: '/muiz.jpg',
     link: 'http://www.abdulmuizolaleye.com/',
     role: 'Co-Founder & Lead Developer',
-    bio: 'Passionate about creating websites that not only look great but drive real business results. Specializes in modern web technologies and conversion optimization.',
+    bio: 'Passionate about creating websites that not only look great but drive real business results. Specializes in modern web technologies.',
     focus: 'Website Design & Development',
   },
   {
-    name: 'Somtochukwu Kay-Okerule',
+    name: 'Somtochukwu Kay-Okerulu',
     image: '/somto.jpg',
     link: 'https://www.linkedin.com/in/somtochukwu-k-32b5bb28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
     role: 'Co-Founder & Brand Strategist',
@@ -24,7 +24,7 @@ const values = [
   {
     icon: '🎯',
     title: 'Results-Driven',
-    description: 'We focus on creating websites that convert visitors into customers.',
+    description: 'We focus on creating websites that convert visitors into loyal customers.',
   },
   {
     icon: '⚡',

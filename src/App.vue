@@ -71,7 +71,6 @@ onMounted(() => {
           <div class="footer-section">
             <h3>AvertoSites</h3>
             <p class="slogan">FAST • AFFORDABLE • DONE RIGHT</p>
-            <p>Custom websites that convert. Professional design meets powerful functionality.</p>
           </div>
 
           <div class="footer-section">

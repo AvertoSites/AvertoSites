@@ -15,7 +15,6 @@ const services = [
       'Content management system',
       'Contact forms and integrations',
     ],
-    price: 'Starting at $999',
   },
   {
     icon: '🔍',
@@ -30,7 +29,6 @@ const services = [
       'Mobile optimization',
       'Local SEO for businesses',
     ],
-    price: 'Starting at $299',
   },
   {
     icon: '🔧',
@@ -45,7 +43,6 @@ const services = [
       'Technical support',
       'Monthly reports',
     ],
-    price: 'Starting at $99/month',
   },
   {
     icon: '📱',
@@ -60,7 +57,6 @@ const services = [
       'Cross-platform consistency',
       'Social media strategy consultation',
     ],
-    price: 'Starting at $199',
   },
   {
     icon: '✍️',
@@ -75,7 +71,6 @@ const services = [
       'SEO-optimized content',
       'Content strategy planning',
     ],
-    price: 'Starting at $150/page',
   },
   {
     icon: '🎨',
@@ -90,55 +85,6 @@ const services = [
       'Business card design',
       'Social media templates',
     ],
-    price: 'Starting at $399',
-  },
-]
-
-const packages = [
-  {
-    name: 'Starter',
-    price: '$999',
-    description: 'Perfect for small businesses and startups',
-    features: [
-      '5-page custom website',
-      'Mobile responsive design',
-      'Contact form',
-      'Basic SEO setup',
-      '1 month of support',
-      'Training session',
-    ],
-    popular: false,
-  },
-  {
-    name: 'Professional',
-    price: '$1,999',
-    description: 'Ideal for growing businesses',
-    features: [
-      '10-page custom website',
-      'Advanced SEO optimization',
-      'E-commerce integration',
-      'Social media integration',
-      '3 months of support',
-      'Content creation (5 pages)',
-      'Analytics setup',
-    ],
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    price: '$3,999',
-    description: 'For established businesses with complex needs',
-    features: [
-      'Unlimited pages',
-      'Custom functionality',
-      'Advanced integrations',
-      'Priority support',
-      '6 months of maintenance',
-      'Full content creation',
-      'Performance optimization',
-      'Security hardening',
-    ],
-    popular: false,
   },
 ]
 </script>
@@ -175,43 +121,6 @@ const packages = [
                 <li v-for="feature in service.features" :key="feature">{{ feature }}</li>
               </ul>
             </div>
-            <div class="service-price">{{ service.price }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Packages -->
-    <section class="pricing">
-      <div class="container">
-        <div class="section-header">
-          <h2>Choose Your Package</h2>
-          <p>Select the perfect package for your business needs and budget</p>
-        </div>
-        <div class="pricing-grid">
-          <div
-            v-for="servicePackage in packages"
-            :key="servicePackage.name"
-            class="pricing-card"
-            :class="{ popular: servicePackage.popular }"
-          >
-            <div v-if="servicePackage.popular" class="popular-badge">Most Popular</div>
-            <div class="package-header">
-              <h3>{{ servicePackage.name }}</h3>
-              <div class="package-price">
-                <span class="price">{{ servicePackage.price }}</span>
-              </div>
-              <p class="package-description">{{ servicePackage.description }}</p>
-            </div>
-            <div class="package-features">
-              <ul>
-                <li v-for="feature in servicePackage.features" :key="feature">
-                  <span class="checkmark">✓</span>
-                  {{ feature }}
-                </li>
-              </ul>
-            </div>
-            <RouterLink to="/contact" class="package-cta">Get Started</RouterLink>
           </div>
         </div>
       </div>
@@ -224,6 +133,25 @@ const packages = [
           <h2>Why Choose AvertoSites?</h2>
           <p>We're not just another web design company - we're your digital success partner</p>
         </div>
+
+        <!-- Special Offer Banner -->
+        <div class="special-offer-banner">
+          <div class="offer-content">
+            <div class="offer-icon">🎁</div>
+            <div class="offer-text">
+              <h3>Special Launch Offer</h3>
+              <p>
+                <strong>Choose Your FREE Bonus: 3 Months Maintenance OR Domain Registration</strong>
+              </p>
+              <p>
+                Every new website project includes your choice: 3 months of complimentary
+                maintenance OR free domain registration. Select the option that best fits your
+                needs!
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="benefits-grid">
           <div class="benefit-item">
             <div class="benefit-icon">⚡</div>
@@ -433,123 +361,67 @@ const packages = [
   font-weight: bold;
 }
 
-.service-price {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--logo-blue);
-  text-align: center;
-  padding-top: 1rem;
-  border-top: 1px solid #e2e8f0;
-}
-
-/* Pricing Section */
-.pricing {
-  padding: 5rem 0;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.pricing-card {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-}
-
-.pricing-card.popular {
-  border: 2px solid var(--logo-green);
-  transform: scale(1.05);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.package-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.package-header h3 {
-  color: var(--logo-black);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.package-price {
-  margin-bottom: 1rem;
-}
-
-.price {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--logo-blue);
-}
-
-.package-description {
-  color: var(--gray);
-  font-size: 0.9rem;
-}
-
-.package-features ul {
-  list-style: none;
-  margin-bottom: 2rem;
-}
-
-.package-features li {
-  color: var(--dark-gray);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-}
-
-.checkmark {
-  color: var(--logo-green);
-  font-weight: bold;
-  margin-right: 0.75rem;
-}
-
-.package-cta {
-  display: block;
-  background: linear-gradient(45deg, var(--logo-blue), var(--logo-green));
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 600;
-  transition: transform 0.3s ease;
-}
-
-.package-cta:hover {
-  transform: translateY(-2px);
-}
-
 /* Why Choose Us */
 .why-choose-us {
   padding: 5rem 0;
   background: var(--off-white);
+}
+
+.special-offer-banner {
+  background: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-black) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-offer-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.offer-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.offer-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.offer-text h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.offer-text p {
+  color: var(--light-gray);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.offer-text p:last-child {
+  margin-bottom: 0;
+}
+
+.offer-text strong {
+  color: var(--logo-green);
+  font-weight: 600;
 }
 
 .benefits-grid {
@@ -700,12 +572,18 @@ const packages = [
     grid-template-columns: 1fr;
   }
 
-  .pricing-grid {
-    grid-template-columns: 1fr;
+  .special-offer-banner {
+    padding: 1.5rem;
   }
 
-  .pricing-card.popular {
-    transform: none;
+  .offer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .offer-text h3 {
+    font-size: 1.25rem;
   }
 
   .benefits-grid {
@@ -745,7 +623,6 @@ const packages = [
   }
 
   .service-card,
-  .pricing-card,
   .benefit-item {
     padding: 1.5rem;
   }
