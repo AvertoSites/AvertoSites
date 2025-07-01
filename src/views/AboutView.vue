@@ -14,7 +14,7 @@ const teamMembers = [
     name: 'Somtochukwu Kay-Okerulu',
     image: '/somto.jpg',
     link: 'https://www.linkedin.com/in/somtochukwu-k-32b5bb28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    role: 'Co-Founder & Brand Strategist',
+    role: 'Co-Founder & Web Operations Manager',
     bio: 'Expert in social media marketing and brand development. Helps businesses create compelling online presence and engage with their audience effectively.',
     focus: 'Social Media + Branding',
   },
